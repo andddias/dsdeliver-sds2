@@ -1,9 +1,13 @@
 import './App.css';
+import Hello from './Hello'
 
 function App() {
   return (
     <div>
-      <h1>Hello world!</h1>
+      <Hello message="Washington" />
+      <Hello message="Nélio" />
+      <Hello message="SDS2" />
+      <Hello message="DevSuperior" />
     </div>
   );
 }
