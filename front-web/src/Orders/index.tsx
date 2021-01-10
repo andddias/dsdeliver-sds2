@@ -13,6 +13,9 @@ function Orders(){
     const [selectedProducts, setSelectedProducts] = useState<Product[]>([]);
     // eslint-disable-next-line
     const [orderLocation, setOrderLocation] = useState<OrderLocationData>();
+    const totalPrice = selectedProducts.reduce((sum, item) => {
+        return sum + item.price;
+    }, 0)
 
     useEffect(() => {        
         fetchProducts()
@@ -43,7 +46,10 @@ function Orders(){
             <OrderLocation
                 onChangeLocation={location => setOrderLocation(location)}             
             />
-            <OrderSummary />
+            <OrderSummary
+                amount={selectedProducts.length}
+                totalPrice={totalPrice}
+            />
         </div>
     )
 }
