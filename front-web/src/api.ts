@@ -1,7 +1,7 @@
 import axios from "axios";
 import { OrderPayload } from "./Orders/types";
 
-//const API_URL = 'http://localhost:8080';
+//const API_URL = process.env.REACT_APP_API_URL;
 const API_URL_WEB = 'https://andre-dias-sds2.herokuapp.com';
 const mapboxToken = process.env.REACT_APP_ACCESS_TOKEN_MAP_BOX;
 
